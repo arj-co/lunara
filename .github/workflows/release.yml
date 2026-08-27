@@ -172,9 +172,8 @@ jobs:
       # ── Stage release assets ──────────────────────────────────────────────
       - name: Rename APKs and generate checksums
         run: |
-          VERSION="${RELEASE_TAG#v}"
-          RELEASE_APK="Lunara-${VERSION}.apk"
-          DEBUG_APK="Lunara-${VERSION}-debug.apk"
+          RELEASE_APK="Lunara.apk"
+          DEBUG_APK="Lunara-debug.apk"
 
           cp app/android/app/build/outputs/apk/release/app-release.apk "$RELEASE_APK"
           cp app/android/app/build/outputs/apk/debug/app-debug.apk     "$DEBUG_APK"
